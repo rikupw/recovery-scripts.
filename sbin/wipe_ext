@@ -1,0 +1,12 @@
+#!/sbin/sh
+
+/sbin/mnt_toggle 0
+	if [ -e /dev/block/mmcblk0p2 ]; then
+		echo "" > /sys/devices/platform/usb_mass_storage/lun0/file    	
+		mount -o rw /dev/block/mmcblk0p2 /system/sd
+		rm -rf /system/sd/app* /system/sd/dalv*
+	else
+		echo "No ext partition found!"
+		exit 1
+	fi
+exit 0

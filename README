@@ -1,0 +1,7 @@
+the following would have (if present) the legal information
+that woudl be attainable, I do not own these binaries nor their
+source!  please do not hold me liable, this repository is more
+for a pet project than anything else between two or three people.
+
+sbin contains all the files in /sbin in the recovery mode, except for
+the recovery binary which you must compile yourself with "make recovery"

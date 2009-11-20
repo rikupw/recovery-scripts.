@@ -1,0 +1,10 @@
+#!/sbin/sh
+if [ -e /dev/block/mmcblk0p2 ]; then
+	/sbin/mnt_toggle 0
+	set -e
+	/sbin/e2fsck -y /dev/block/mmcblk0p2
+else
+	echo "No extfs partition found!"
+	exit 1
+fi
+exit 0

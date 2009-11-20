@@ -1,0 +1,19 @@
+#!/sbin/sh
+
+#Mike Taylor's fix_rotate script
+#mount the data partition and move to the /misc directory
+mount /data
+	if [ -d /data/misc ]; then
+		cd /data/misc/
+		echo "Contents of /data/misc/"
+		echo `ls /data/misc/`
+	#Delete the rild and akmd files
+		rm -r akmd*
+		rm -r rild*
+		echo "Contents of /data/misc/ after delete"
+		echo `ls /data/misc/`
+		/sbin/mnt_toggle 0
+		exit 0
+	else
+		exit 1
+	fi
