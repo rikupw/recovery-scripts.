@@ -1,7 +1,0 @@
-this is a placeholder for a 4th partition
-
-/dev/block/mmcblk0p4
-
-to use, make a 4th partition on your sdcard, have it extfs preferably.
-
-you can also use mmcblk0p3 but this recovery is designed for mmcblk0p4 (fat32/extfs/swap/extfs)
